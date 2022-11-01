@@ -8,6 +8,10 @@
 
     <link rel="stylesheet" href="static/style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -16,17 +20,40 @@
     <section class="game-container bordered">
         <div class="left-column">
             <div class="controls-container bordered">
-                <p>click inside  texrt pott ewef sdfngy</p>
+                <h3 class="controls-spacing">Click the grid to toggle color changing magic!</h3>
+            
+                <button class="clear-board controls-spacing bordered">Clear / Change Board</button>
+
+                <div class="slidecontainer controls-spacing">
+                    <input type="range" min="1" max="111" value="16" class="slider" id="myRange">
+                    <span id="demo"></span>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn bordered">Dropdown</button>
+                    <div class="dropdown-content">
+                      <li>
+                        <ul class="color-option bordered black">Black</ul>
+                        <ul class="color-option bordered white">White</ul>
+                        <ul class="color-option bordered warm">Warm</ul>
+                        <ul class="color-option bordered cool">Cool</ul>
+                        <!--
+                            Adding The Alpha attribute to the RGB will allow me to 
+                                edit brightness on the next update
+                            <ul class="color-option bordered darken">Darken</ul>
+                        -->
+                      </li>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="right-column">
-            <div class="grid-container bordered">
 
-            </div>
         </div>
     </section>
 
     <script src="static/script.js"></script>
+
 </body>
 </html>
