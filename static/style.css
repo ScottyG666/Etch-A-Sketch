@@ -2,34 +2,34 @@
     --accent-color : #3868c2;
     --calming-gray : #C0BBB2 ;
     --dark-gray: #383838;
+    --background-color: white;
 }
 
 * {
     padding: 0 ;
     margin: 0 ;
     box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 
 html ,body {
     height: 100%;
-    background-color: bisque;
-    color: white;
-    height: 100%;
     text-align: center;
+    background-color: var(--background-color);
 }
 
 .bordered {
     border: 5px solid var(--accent-color);
     border-radius: 15px;
-    background-color: var(--calming-gray) ;
-    box-shadow: -15px 15px 15px var(--calming-gray);
+    background-color: var(--background-color) ;
+    
+    box-shadow: -15px 15px 15px var(--dark-gray);
+    
 }
 
 .game-header {
-    width: 400px;
-    height: 100px;
-    padding-top:15px ;
+    width: 300px;
     margin:50px auto;
     color: var(--accent-color);
     
@@ -44,6 +44,8 @@ section.game-container {
     color: var(--dark-gray);
 }
 
+
+/*          STYLING CONTROL PANEL BEGINNING         */
 .left-column {
     width: 400px;
     padding-top:75px;
@@ -53,9 +55,117 @@ section.game-container {
     width: 310px;
     height: 450px;
     margin: auto;
-    
-    background-color: bisque;
+    color: var(--accent-color);
 }
+
+.clear-board {
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    color: var(--accent-color);
+    
+}
+
+/*          SLIDER MENU BEGINS                    */
+.slidecontainer {
+    width: 80%; /* Width of the outside container */
+    margin: auto;
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    cursor: pointer;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+/*          SLIDER MENU ENDS                    */
+
+.controls-spacing {
+    margin : 15px auto;
+}
+
+
+/*          COLOR OPTIONS DROPDOWN MENU BEGINS*/
+
+.dropbtn {
+    color: var(--accent-color);
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    font-size: 18px;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content ul {
+    color: var(--accent-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    list-style-type: none;
+    display: block;
+  }
+  
+  .dropdown-content ul:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #1a418a;}
+
+.color-option{
+    width: 120px;
+    margin: 5px auto;
+    
+}
+li {
+    list-style-type: none;
+}
+
+/*          COLOR OPTIONS DROPDOWN MENU ENDS*/
+
+
+/*          STYLING CONTROL PANEL END               */
+
 
 .right-column {
     display: flex;
@@ -69,7 +179,6 @@ section.game-container {
 .grid-container {
     height: 550px;
     width: 550px;
-    background-color: white;
     display: flex;
     flex-direction: column;
     
@@ -84,7 +193,23 @@ section.game-container {
 
 
 .grid-square {
-    background-color: maroon;
     height: 100%;
     width: 100%;
 }
+
+.rounded-top-left {
+    border-top-left-radius: 8px;
+}
+
+.rounded-top-right {
+    border-top-right-radius: 8px;
+}
+
+.rounded-bottom-left {
+    border-bottom-left-radius: 8px;
+}
+
+.rounded-bottom-right {
+    border-bottom-right-radius: 8px;
+}
+
