@@ -213,3 +213,18 @@ li {
     border-bottom-right-radius: 8px;
 }
 
+.footer {
+    width: 400px;
+    margin: auto;
+    height: 60px;
+    display: flex;
+    align-content: center
+}
+
+.footer a{
+    margin-top: 15px ;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--accent-color);
+    padding:0 5px ;
+}
